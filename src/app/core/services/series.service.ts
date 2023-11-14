@@ -8,7 +8,7 @@ import { Serie } from '../interfaces/serie.interface';
 })
 export class SeriesService {
 
-  private baseUrl: string = 'https://peticiones.online/series';
+  private baseUrl: string = 'https://peticiones.online/api/series';
   private httpClient = inject(HttpClient);
 
   getAll() {
