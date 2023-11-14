@@ -1,0 +1,9 @@
+BLOQUE 4
+Componente: NavBar (shared/components/nav-bar.component.ts)
+
+Barra de navegación con las rutas:
+
+/series
+/series/nueva
+
+Dentro del servicio Series (core/services/series.service.ts) definimos el método getAllChannels que me devuelva todos los canales para poder visualizarlos en un select dentro de la NavBar
