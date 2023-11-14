@@ -10,9 +10,10 @@ export class SeriesService {
   httpClient = inject(HttpClient)
   baseUrl = 'https://peticiones.online/api/series'
 
-  getById(id: number) {
+  getById(id: string) {
+
     return firstValueFrom(
-      this.httpClient.get(`${this.baseUrl}/${id}`)
+      this.httpClient.get<any>(`${this.baseUrl}/${id}`)
     )
   }
 

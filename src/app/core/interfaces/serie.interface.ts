@@ -1,5 +1,5 @@
 export interface Serie {
-    id: number;
+    id: string;
     title: string;
     creator: string;
     rating: number;

@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Serie } from 'src/app/core/interfaces/serie.interface';
+import { SeriesService } from 'src/app/core/services/series.service';
 
 @Component({
   selector: 'app-detalle-serie',
@@ -10,12 +12,20 @@ export class DetalleSerieComponent {
 
   activatedRoute = inject(ActivatedRoute)
   router = inject(Router)
-  id: string = ''
+  seriesService = inject(SeriesService)
+
+  id!: string
+  serieSeleccionada!: Serie;
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(
-      params => this.id = params['idserie']
-    )
-    this.router.navigate(['/series', this.id])
+      async params => {
+        this.id = params['idserie']
+        const response = await this.seriesService.getById(this.id)
+        console.log(response);
+      })
+
   }
+
+
 }
