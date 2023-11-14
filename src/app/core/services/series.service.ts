@@ -10,7 +10,7 @@ export class SeriesService {
 
   httpClient = inject(HttpClient)
 
-  serieUrl = 'https://peticiones.online/series'
+  serieUrl = 'https://peticiones.online/api/series'
 
   create(serie: Serie) {
     return firstValueFrom(this.httpClient.post<Serie>(this.serieUrl, serie))
