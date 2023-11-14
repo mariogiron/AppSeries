@@ -17,4 +17,9 @@ export class SeriesService {
     )
   }
 
+  create(serie: Serie) {
+    return firstValueFrom(this.httpClient.post<Serie>(this.baseUrl, serie))
+  }
+
+
 }
