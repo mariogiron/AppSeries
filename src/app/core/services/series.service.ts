@@ -21,5 +21,13 @@ export class SeriesService {
     return firstValueFrom(this.httpClient.post<Serie>(this.baseUrl, serie))
   }
 
+  getById(id: string) {
+
+    return firstValueFrom(
+      this.httpClient.get<any>(`${this.baseUrl}/${id}`)
+    )
+  }
+
+
 
 }
