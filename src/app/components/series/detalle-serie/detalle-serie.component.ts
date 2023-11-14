@@ -22,7 +22,7 @@ export class DetalleSerieComponent {
       async params => {
         this.id = params['idserie']
         const response = await this.seriesService.getById(this.id)
-        console.log(response);
+        this.serieSeleccionada = response
       })
 
   }
