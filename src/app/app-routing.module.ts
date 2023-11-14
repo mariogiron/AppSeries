@@ -15,3 +15,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+/* /series
+/series/nueva
+ */

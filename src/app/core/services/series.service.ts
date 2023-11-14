@@ -28,6 +28,10 @@ export class SeriesService {
     )
   }
 
+  getAllChannels() {
+    return firstValueFrom(this.httpClient.get(this.baseUrl))
+  }
 
 
 }
+

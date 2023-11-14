@@ -8,13 +8,15 @@ import { ListaSeriesComponent } from './components/series/lista-series/lista-ser
 import { NuevaSerieComponent } from './components/series/nueva-serie/nueva-serie.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DetalleSerieComponent } from './components/series/detalle-serie/detalle-serie.component';
+import { NavBarComponent } from './shared/components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaSeriesComponent,
     NuevaSerieComponent,
-    DetalleSerieComponent
+    DetalleSerieComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
