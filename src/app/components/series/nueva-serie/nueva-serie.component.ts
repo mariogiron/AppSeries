@@ -11,11 +11,15 @@ export class NuevaSerieComponent {
 
   serieService = inject(SeriesService)
 
+  // serie!:Serie
+
   testSeries: Serie = { id: 3, title: "string", creator: "string", rating: 3, dates: "string", image: "string", channel: "string" }
 
   async ngOnInit() {
     try {
+      console.log(this.testSeries)
       const response = await this.serieService.create(this.testSeries)
+
       console.log(response)
     } catch (e: any) {
       console.log(e)
